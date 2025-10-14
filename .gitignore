@@ -1,0 +1,42 @@
+# Personal files to ignore (add your real content files here)
+# Uncomment these when you add your actual content:
+# data/news.csv
+# data/news.xlsx
+# data/projects.csv
+# data/projects.xlsx
+# documents/*.pdf
+# assets/profile/*.jpg
+# assets/profile/*.png
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Backup files
+*.bak
+*.backup
