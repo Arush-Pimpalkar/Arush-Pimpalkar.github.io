@@ -8,7 +8,7 @@
 body {
   font-family: Avenir, sans-serif;
   margin: 0;
-  background: linear-gradient(135deg, #fafafa 0%, #e8f0f1 100%);
+  background: linear-gradient(rgb(70, 131, 117), rgb(92, 143, 135), rgb(113, 155, 153), rgb(133, 167, 171), rgb(154, 179, 190));
   min-height: 100vh;
   /* Highlight selections with very light grey */
   ::selection {
