@@ -8,6 +8,8 @@
 body {
   font-family: Avenir, sans-serif;
   margin: 0;
+  background: linear-gradient(135deg, #fafafa 0%, #e8f0f1 100%);
+  min-height: 100vh;
   /* Highlight selections with very light grey */
   ::selection {
     background: var(--light-grey);
