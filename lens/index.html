@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lens • Arush Pimpalkar</title>
+    <meta
+      name="description"
+      content="Photography and visual stories by Arush Pimpalkar."
+    />
+    <meta name="author" content="Arush Pimpalkar" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://arush-pimpalkar.github.io/lens" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Lens • Arush Pimpalkar" />
+    <meta
+      property="og:description"
+      content="Photography and visual stories by Arush Pimpalkar."
+    />
+    <meta property="og:url" content="https://arush-pimpalkar.github.io/lens" />
+    <meta
+      property="og:image"
+      content="https://arush-pimpalkar.github.io/assets/arush/arush_pfp.jpeg"
+    />
+    <meta property="og:image:alt" content="Portrait of Arush Pimpalkar" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lens • Arush Pimpalkar" />
+    <meta
+      name="twitter:description"
+      content="Photography and visual stories by Arush Pimpalkar."
+    />
+    <meta
+      name="twitter:image"
+      content="https://arush-pimpalkar.github.io/assets/arush/arush_pfp.jpeg"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/59c3a7ed5b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <a class="skip_link" href="#main-content">Skip to main content</a>
+    <div data-header></div>
+    <main class="content" id="main-content">
+      <div class="spacer_med"></div>
+      <div class="name_big">
+        <span class="name_main">Lens</span>
+        <span class="name_sub">Moments captured through my camera</span>
+      </div>
+      
+      <!-- Filter Controls -->
+      <div id="lens-controls" class="lens_filters"></div>
+      
+      <!-- Photo Grid -->
+      <section class="lens_gallery" id="lens-gallery">
+        <div class="lens_grid" id="lens-grid"></div>
+      </section>
+      
+      <!-- Lightbox for full-size viewing -->
+      <div id="lens-lightbox" class="lens_lightbox" style="display: none;">
+        <button class="lens_lightbox_close" aria-label="Close">&times;</button>
+        <button class="lens_lightbox_prev" aria-label="Previous">&#10094;</button>
+        <button class="lens_lightbox_next" aria-label="Next">&#10095;</button>
+        <div class="lens_lightbox_content">
+          <img id="lens-lightbox-image" src="" alt="" />
+          <div class="lens_lightbox_caption">
+            <h3 id="lens-lightbox-title"></h3>
+            <p id="lens-lightbox-description"></p>
+            <div id="lens-lightbox-metadata"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div data-footer></div>
+    </main>
+    <script src="/js/header.js" defer></script>
+    <script src="/js/data-loader.js" defer></script>
+    <script src="/js/lens.js" defer></script>
+    <script src="/js/footer.js" defer></script>
+    <script src="/js/last-updated.js" defer></script>
+  </body>
+</html>

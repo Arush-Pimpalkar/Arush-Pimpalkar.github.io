@@ -1477,3 +1477,264 @@ h2 {
     border-radius: 10px;
   }
 }
+
+/* ==================== LENS GALLERY STYLES ==================== */
+
+.lens_gallery {
+  width: 100%;
+  margin: 2em 0 4em;
+}
+
+.lens_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.lens_card {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.lens_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.lens_card_image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--light-grey);
+}
+
+.lens_card_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.lens_card:hover .lens_card_image img {
+  transform: scale(1.05);
+}
+
+.lens_card_caption {
+  padding: 1.25em 1.5em;
+}
+
+.lens_card_title {
+  margin: 0 0 0.5em;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--dark-grey);
+}
+
+.lens_card_description {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--medium-grey);
+}
+
+.lens_card_meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 1em 1.5em;
+  border-top: 1px solid var(--light-grey);
+  font-size: 0.85rem;
+  color: var(--medium-grey);
+}
+
+.lens_card_meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+.lens_card_meta i {
+  font-size: 0.9rem;
+}
+
+.lens_empty {
+  text-align: center;
+  color: var(--medium-grey);
+  font-size: 1.125rem;
+  padding: 4em 2em;
+}
+
+/* Filter Buttons */
+.lens_filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  margin: 2em 0 1em;
+}
+
+.lens_filter_btn {
+  font-family: inherit;
+  padding: 0.5em 1.5em;
+  border-radius: 999px;
+  border: 2px solid var(--light-grey);
+  background: #fff;
+  color: var(--dark-grey);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lens_filter_btn:hover {
+  border-color: var(--harvard);
+  color: var(--harvard);
+}
+
+.lens_filter_btn.is-active {
+  background: var(--harvard);
+  border-color: var(--harvard);
+  color: #fff;
+}
+
+/* Lightbox */
+.lens_lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+
+.lens_lightbox_content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.lens_lightbox_content img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.lens_lightbox_caption {
+  color: #fff;
+  text-align: center;
+}
+
+.lens_lightbox_caption h3 {
+  margin: 0 0 0.5em;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.lens_lightbox_caption p {
+  margin: 0 0 1em;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#lens-lightbox-metadata {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.lens_lightbox_close,
+.lens_lightbox_prev,
+.lens_lightbox_next {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5em;
+  transition: background 0.2s ease;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lens_lightbox_close {
+  top: 1em;
+  right: 1em;
+}
+
+.lens_lightbox_prev {
+  left: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lens_lightbox_next {
+  right: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lens_lightbox_close:hover,
+.lens_lightbox_prev:hover,
+.lens_lightbox_next:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 767px) {
+  .lens_grid {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+
+  .lens_lightbox {
+    padding: 1em;
+  }
+
+  .lens_lightbox_content img {
+    max-height: 60vh;
+  }
+
+  .lens_lightbox_close,
+  .lens_lightbox_prev,
+  .lens_lightbox_next {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .lens_lightbox_prev {
+    left: 0.5em;
+  }
+
+  .lens_lightbox_next {
+    right: 0.5em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .lens_grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5em;
+  }
+}
