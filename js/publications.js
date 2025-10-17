@@ -386,7 +386,7 @@ function parseAuthors(authors) {
   }
 
   return authors
-    .split(";")
+    .split(",")
     .map((author) => author.trim())
     .filter(Boolean);
 }
