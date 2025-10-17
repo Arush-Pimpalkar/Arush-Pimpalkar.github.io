@@ -11,7 +11,7 @@ body {
   font-weight: 400;
   font-style: normal;
   margin: 0;
-  background: linear-gradient(rgb(70, 131, 117), rgb(92, 143, 135), rgb(113, 155, 153), rgb(133, 167, 171), rgb(154, 179, 190));
+  background: rgb(237, 237, 237);
   min-height: 100vh;
   /* Highlight selections with very light grey */
   ::selection {
