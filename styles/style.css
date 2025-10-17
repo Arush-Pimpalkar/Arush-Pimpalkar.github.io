@@ -11,7 +11,7 @@ body {
   font-weight: 400;
   font-style: normal;
   margin: 0;
-  background: rgb(237, 237, 237);
+  background: rgb(245, 245, 245);
   min-height: 100vh;
   /* Highlight selections with very light grey */
   ::selection {
