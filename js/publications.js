@@ -223,7 +223,10 @@ function buildPublicationCard(publication) {
 
     authors.forEach((author, index) => {
       const authorSpan = document.createElement("span");
-      if (author.toLowerCase() === "arush pimpalkar") {
+      const authorLower = author.toLowerCase().trim();
+      console.log("Checking author:", `"${author}"`, "lowercase:", `"${authorLower}"`);
+      if (authorLower === "arush pimpalkar") {
+        console.log("MATCH! Adding underline class");
         authorSpan.classList.add("underline");
       }
       authorSpan.textContent = author;
