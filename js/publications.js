@@ -458,19 +458,15 @@ function initFilters(publications) {
 
   controls.textContent = "";
 
-  const typeSet = new Set();
   const themeSet = new Set();
 
   publications.forEach((publication) => {
-    if (publication.type) {
-      typeSet.add(publication.type.toLowerCase());
-    }
     parseThemes(publication.themes).forEach((theme) => {
       themeSet.add(theme.toLowerCase());
     });
   });
 
-  if (!typeSet.size && !themeSet.size) {
+  if (!themeSet.size) {
     return;
   }
 
@@ -479,12 +475,6 @@ function initFilters(publications) {
   if (themeSet.size) {
     fragment.appendChild(
       createFilterGroup("What", Array.from(themeSet).sort(), "theme")
-    );
-  }
-
-  if (typeSet.size) {
-    fragment.appendChild(
-      createFilterGroup("Where", Array.from(typeSet).sort(), "type")
     );
   }
 

@@ -132,7 +132,7 @@ h2 {
 }
 
 .spacer_med {
-  margin: 4em 0;
+  margin: 1.25em 0;
 }
 
 .footer_hr {
@@ -559,12 +559,29 @@ h2 {
   }
 }
 
+/* Reserves the width of the longest phrase so the centred line does not
+   shift as the text grows; the caret sits on the text inside it. */
 .typing {
   display: inline-block;
+  text-align: left;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.typing_text {
+  display: inline-block;
+  min-height: 1em;
   border-right: 2px solid currentColor;
   padding-right: 6px;
   white-space: nowrap;
   animation: caret-blink 0.8s steps(1) infinite;
+}
+
+/* Hold the caret steady while characters are being typed; it only blinks
+   during the pauses at the end of a phrase. */
+.typing_text.is-typing {
+  border-right-color: currentColor;
+  animation: none;
 }
 
 @keyframes caret-blink {
